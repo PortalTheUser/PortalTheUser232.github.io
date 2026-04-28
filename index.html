@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<title>Korone's Panel</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #111;
+  display: flex;
+  color: #fff;
+}
+
+/* SIDEBAR */
+.sidebar {
+  width: 230px;
+  height: 100vh;
+  background: linear-gradient(180deg, #1f1f1f, #141414);
+  padding: 20px;
+}
+
+.sidebar h3 {
+  color: #aaa;
+  font-size: 12px;
+  margin-top: 20px;
+}
+
+.sidebar a {
+  display: block;
+  color: #ccc;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+.sidebar a:hover {
+  background: #2a2a2a;
+  color: #fff;
+}
+
+/* MAIN */
+.main {
+  flex: 1;
+  padding: 20px;
+}
+
+/* PROFILE CARD */
+.profile {
+  background: linear-gradient(180deg, #2b2b2b, #1c1c1c);
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.avatar {
+  width: 70px;
+  height: 70px;
+  background: #333;
+  border-radius: 10px;
+}
+
+.badge {
+  padding: 3px 8px;
+  border-radius: 6px;
+  font-size: 12px;
+  margin-right: 5px;
+}
+
+.admin { background: orange; }
+.ok { background: #2ecc71; }
+
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+}
+
+/* PANELS */
+.panel {
+  background: linear-gradient(180deg, #2b2b2b, #1c1c1c);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.panel h2 {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+/* SUMMARY BOX */
+.summary-box {
+  background: #204a4a;
+  padding: 10px;
+  border-radius: 6px;
+  margin-bottom: 15px;
+}
+
+/* INFO GRID */
+.info {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.info div {
+  background: #1a1a1a;
+  padding: 10px;
+  border-radius: 6px;
+  font-size: 13px;
+}
+
+/* BUTTONS */
+.btn {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+.red { background: #e84142; color: white; }
+.dark { background: #2a2a2a; color: #ddd; }
+.green { background: #2ecc71; color: white; }
+
+.btn:hover { opacity: 0.9; }
+
+/* INPUT */
+.input {
+  width: 100%;
+  padding: 10px;
+  background: #222;
+  border: 1px solid #444;
+  border-radius: 6px;
+  color: #fff;
+  margin-top: 10px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- SIDEBAR -->
+<div class="sidebar">
+  <h3>DASHBOARD</h3>
+  <a href="#">Home</a>
+
+  <h3>USERS</h3>
+  <a href="#">Players</a>
+  <a href="#">Groups</a>
+  <a href="#">Create Player</a>
+  <a href="#">Player List</a>
+
+  <h3>MODERATION</h3>
+  <a href="#">Reports</a>
+  <a href="#">Transcripts</a>
+
+  <h3>WEB</h3>
+  <a href="#">Assets</a>
+  <a href="#">Assets Moderation</a>
+</div>
+
+<!-- MAIN -->
+<div class="main">
+
+  <!-- PROFILE -->
+  <div class="profile">
+    <div class="avatar"></div>
+    <div>
+      <h2>thug.</h2>
+      <span class="badge admin">Admin</span>
+      <span class="badge ok">Account OK</span>
+      <p style="color:#aaa; font-size:12px;">View ROBLOX Profile</p>
+    </div>
+  </div>
+
+  <div class="grid">
+
+    <!-- LEFT -->
+    <div class="panel">
+      <h2>User Summary</h2>
+
+      <div class="summary-box">
+        This user cannot be modified.
+      </div>
+
+      <div class="info">
+        <div>Joined<br><b>4 months ago</b></div>
+        <div>Last Online<br><b>few seconds ago</b></div>
+        <div>Currency<br><b>2119 Robux</b></div>
+      </div>
+
+      <h2>Privacy Settings</h2>
+      <div class="info">
+        <div>Inventory: All</div>
+        <div>Theme: Light</div>
+        <div>Year: 2016</div>
+      </div>
+
+      <h2>Account Details</h2>
+      <div class="info">
+        <div>Join Method: App</div>
+        <div>Membership: OBC</div>
+        <div>UGC Upload: No</div>
+      </div>
+    </div>
+
+    <!-- RIGHT -->
+    <div>
+
+      <div class="panel">
+        <h2>Account Actions</h2>
+
+        <button class="btn red">Ban User</button>
+        <button class="btn dark">Nullify Password</button>
+        <button class="btn dark">Reset Sessions</button>
+        <button class="btn dark">Lock Account</button>
+        <button class="btn dark">Unverify User</button>
+        <button class="btn dark">Allow UGC</button>
+        <button class="btn dark">Reset Username</button>
+      </div>
+
+      <div class="panel" style="margin-top:20px;">
+        <h2>Economy</h2>
+
+        <button class="btn green">Add</button>
+        <button class="btn red">Remove</button>
+
+        <input class="input" type="number" placeholder="Amount">
+        <input class="input" type="text" placeholder="UserID / Username">
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+</body>
+</html>
