@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Chat Logs - KoroneLarp</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #0f0f0f;
+  color: #fff;
+  display: flex;
+}
+
+.sidebar {
+  width: 220px;
+  height: 100vh;
+  background: #111;
+  padding: 20px;
+}
+
+.sidebar h2 {
+  font-size: 14px;
+  color: #888;
+}
+
+.sidebar a {
+  display: block;
+  color: #ccc;
+  text-decoration: none;
+  padding: 6px 0;
+}
+
+.main {
+  flex: 1;
+  padding: 20px;
+}
+
+.header {
+  background: linear-gradient(90deg, #1c1c1c, #2a2a2a);
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.chat-box {
+  background: #1a1a1a;
+  border-radius: 10px;
+  padding: 15px;
+  height: 500px;
+  overflow-y: auto;
+}
+
+.message {
+  margin-bottom: 12px;
+  padding: 10px;
+  border-radius: 8px;
+  background: #222;
+}
+
+.user {
+  font-weight: bold;
+}
+
+.time {
+  font-size: 11px;
+  color: #888;
+  float: right;
+}
+
+/* Roles */
+.admin { color: #ff4d4d; }
+.mod { color: #ffaa00; }
+.user-color { color: #4da6ff; }
+.special { color: #9b59b6; }
+
+/* Input */
+.input-box {
+  margin-top: 15px;
+  display: flex;
+}
+
+.input-box input {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  background: #222;
+  color: #fff;
+  border-radius: 8px 0 0 8px;
+}
+
+.input-box button {
+  padding: 10px 15px;
+  border: none;
+  background: #4caf50;
+  color: #fff;
+  border-radius: 0 8px 8px 0;
+  cursor: pointer;
+}
+</style>
+</head>
+
+<body>
+
+<div class="sidebar">
+  <h2>DASHBOARD</h2>
+  <a href="index.html">Home</a>
+  <a href="#">Users</a>
+  <a href="#">Logs</a>
+
+  <h2>MODERATION</h2>
+  <a href="#">Reports</a>
+  <a href="#">Chat Logs</a>
+</div>
+
+<div class="main">
+  
+  <div class="header">
+    <h2>Chat Logs - Global</h2>
+  </div>
+
+  <div class="chat-box" id="chat">
+
+    <div class="message">
+      <span class="user admin">[ADMIN] PortalTheUser</span>
+      <span class="time">22:31</span>
+      <div>alr supra, report on the upds?</div>
+    </div>
+
+    <div class="message">
+      <span class="user special">[DEV] supra</span>
+      <span class="time">22:32</span>
+      <div>update released like now</div>
+    </div>
+
+    <div class="message">
+      <span class="user admin">[ADMIN] thugshaker</span>
+      <span class="time">22:33</span>
+      <div>who the fucked messed up with economy?</div>
+    </div>
+
+    <div class="message">
+      <span class="user user-color">xbox360larp</span>
+      <span class="time">22:33</span>
+      <div>bruh i just clicked everything :skull:</div>
+    </div>
+
+    <div class="message">
+      <span class="user admin">[ADMIN] thugshaker</span>
+      <span class="time">22:34</span>
+      <div>💀</div>
+    </div>
+
+    <div class="message">
+      <span class="user special">[DEV] supra</span>
+      <span class="time">22:34</span>
+      <div>fuck it bro.</div>
+    </div>
+
+  </div>
+
+</body>
+</html>
