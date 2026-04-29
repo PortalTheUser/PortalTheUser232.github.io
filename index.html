@@ -4,6 +4,15 @@
 <meta charset="UTF-8">
 <title>Korone's Admin Panel</title>
 
+<!-- CONFIGURAÇÃO PARA O DISCORD (EMBED) -->
+<meta property="og:title" content="PortalTheUser - Korone's Admin Panel">
+<meta property="og:description" content="Admin e Owner. Veja estatísticas de Robux, Tix e status da conta no painel oficial.">
+<meta property="og:url" content="https://github.io">
+<!-- IMPORTANTE: O link da imagem abaixo deve ser o link COMPLETO do seu site no GitHub -->
+<meta property="og:image" content="https://github.ioimg/y.png">
+<meta name="theme-color" content="#9370DB"> <!-- Cor roxa para combinar com a badge Owner -->
+<meta property="og:type" content="website">
+
 <style>
 body {
   margin: 0;
@@ -62,6 +71,8 @@ body {
   height: 70px;
   background: #333;
   border-radius: 10px;
+  object-fit: cover; /* Garante que a imagem não fique esticada */
+  border: 1px solid #444; /* Um pequeno contorno para destacar */
 }
 
 .badge {
@@ -73,6 +84,7 @@ body {
 
 .admin { background: orange; }
 .ok { background: #2ecc71; }
+.owner { background: #9370DB; }
 
 /* GRID */
 .grid {
@@ -141,6 +153,7 @@ body {
   border-radius: 6px;
   color: #fff;
   margin-top: 10px;
+  box-sizing: border-box; /* Evita que o input saia da caixa */
 }
 </style>
 </head>
@@ -167,7 +180,7 @@ body {
   <a href="#">Assets Moderation</a>
 
   <h3>SERVERS</h3>
-  <a href="#">DDOS PANEL
+  <a href="#">Panel</a>
     
 </div>
 
@@ -176,12 +189,14 @@ body {
 
   <!-- PROFILE -->
   <div class="profile">
-    <img src="img/hi.png" alt="Avatar" class="avatar">
+    <!-- Imagem configurada para a sua pasta img -->
+    <img src="img/y.png" alt="Avatar de PortalTheUser" class="avatar">
     <div>
-      <h2>thug.</h2>
+      <h2 style="margin: 0 0 5px 0;">PortalTheUser</h2>
       <span class="badge admin">Admin</span>
+      <span class="badge owner">Owner</span>
       <span class="badge ok">Account OK</span>
-      <p style="color:#aaa; font-size:12px;">View ROBLOX Profile</p>
+      <p style="color:#aaa; font-size:12px; margin-top: 8px;">View ROBLOX Profile</p>
     </div>
   </div>
 
@@ -196,16 +211,16 @@ body {
       </div>
 
       <div class="info">
-        <div>Joined<br><b>4 months ago</b></div>
-        <div>Last Online<br><b>few seconds ago</b></div>
-        <div>Robux<br><b>2119 Robux</b></div>
-        <div>Tix<br><b>2750 Tix</b></div>
+        <div>Joined<br><b>8 months ago</b></div>
+        <div>Last Online<br><b>20 seconds ago</b></div>
+        <div>Robux<br><b> 164K Robux</b></div>
+        <div>Tix<br><b>2110 Tix</b></div>
       </div>
 
       <h2>Privacy Settings</h2>
       <div class="info">
         <div>Inventory: All</div>
-        <div>Theme: Light</div>
+        <div>Theme: Dark</div>
         <div>Year: 2016</div>
       </div>
 
@@ -213,8 +228,8 @@ body {
       <div class="info">
         <div>Join Method: App</div>
         <div>Membership: OBC</div>
-        <div>UGC Upload: No</div>
-        <div>Account ID: 49603</div>
+        <div>UGC Upload: Yes</div>
+        <div>Account ID: 22798</div>
       </div>
     </div>
 
